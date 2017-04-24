@@ -1,0 +1,20 @@
+{
+  "name": "statistics-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^7.0.13",
+    "@types/restify": "^2.0.42",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  }
+}
