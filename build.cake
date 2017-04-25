@@ -14,7 +14,7 @@ Task("Build:Api")
   .IsDependentOn("Restore:Api")
   .Does(() =>
 {
- Npm.FromPath(apiBasePath).RunScript("Build");
+ Npm.FromPath(apiBasePath).RunScript("build");
 });
 
 Task("Build")
