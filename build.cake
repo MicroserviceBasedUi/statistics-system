@@ -21,12 +21,6 @@ Task("Build")
   .IsDependentOn("Build:Api")
   .Does(() =>
 {
-  var npmRunBuildProcessSettings = new ProcessSettings {
-	Arguments = "run build",
-	WorkingDirectory = apiBasePath
-  };
-
-  StartProcess("npm", npmRunBuildProcessSettings);
 });
 
 Task("Default")
