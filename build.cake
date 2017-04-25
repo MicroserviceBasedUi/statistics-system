@@ -1,4 +1,4 @@
- #addin "Cake.Npm"
+#addin Cake.Npm
 
 var target = Argument("target", "Default");
 
@@ -7,24 +7,14 @@ var apiBasePath = "./src/Zuehlke.StatisticsService.Api";
 Task("Restore:Api")
   .Does(() =>
 {
-  var processSettings = new ProcessSettings {
-	Arguments = "install",
-	WorkingDirectory = apiBasePath
-  };
-
-  StartProcess("npm", processSettings);
+  Npm.FromPath(apiBasePath).Install();
 });
 
 Task("Build:Api")
   .IsDependentOn("Restore:Api")
   .Does(() =>
 {
-  var npmInstallProcessSettings = new ProcessSettings {
-	Arguments = "install",
-	WorkingDirectory = apiBasePath
-  };
-
-  StartProcess("npm", npmInstallProcessSettings);
+ Npm.FromPath(apiBasePath).Run("Build");
 });
 
 Task("Build")
