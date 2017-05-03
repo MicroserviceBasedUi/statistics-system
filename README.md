@@ -9,7 +9,7 @@ On Windows:
 
 On OS X:
 ```
-./build.sh -target build
+./build.sh --target build
 ```
 
 # Run
@@ -20,5 +20,5 @@ On Windows:
 
 On OS X:
 ```
-./build.sh -target run
+./build.sh --target run
 ```
