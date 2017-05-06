@@ -13,6 +13,8 @@ On OS X:
 ```
 
 # Run
+This command will run the CDN on port 3000.
+
 On Windows:
 ```
 ./build.ps1 -target run

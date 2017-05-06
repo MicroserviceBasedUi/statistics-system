@@ -6,7 +6,9 @@ export default class HealthController {
     public get(req: restify.Request, res: restify.Response, next: restify.Next) {
         logger.info('accessing health route');
         res.json(200, {
-            name: settings.name
+            name: settings.name,
+			version: settings.version,
+			environment: settings.env
         });
 
         return next();

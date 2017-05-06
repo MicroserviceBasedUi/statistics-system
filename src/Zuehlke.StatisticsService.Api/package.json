@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+	"life": "nodemon -e ts  --exec \"npm run start\"",
+    "start": "npm run build && node index.js",
     "build": "tsc"
   },
   "author": "",
@@ -16,5 +16,8 @@
     "nodemon": "^1.11.0",
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2"
+  },
+  "dependencies": {
+    "restify": "^4.3.0"
   }
 }

@@ -23,6 +23,12 @@ Task("Build")
 {
 });
 
+Task("Start")
+  .Does(() =>
+{
+  Yarn.FromPath(apiBasePath).RunScript("life");
+});
+
 Task("Default")
   .IsDependentOn("Build")
   .Does(() =>
