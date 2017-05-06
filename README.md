@@ -13,7 +13,7 @@ On OS X:
 ```
 
 # Run
-This command will run the CDN on port 3000.
+This command will run the statistics-system on port 3000.
 
 On Windows:
 ```
